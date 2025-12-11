@@ -1,4 +1,27 @@
-// --- PROJECT DATA ---
+// --- DİL DEĞİŞTİRME ---
+let currentLang = 'en';
+
+function toggleLanguage() {
+    currentLang = currentLang === 'en' ? 'jp' : 'en';
+    
+    // Data-en ve Data-jp olan her elementi bul ve değiştir
+    const elements = document.querySelectorAll('[data-en]');
+    
+    elements.forEach(el => {
+        // Eğer içinde HTML tag varsa innerHTML kullan, yoksa textContent
+        if (el.children.length > 0 || el.innerHTML.includes('<')) {
+            el.innerHTML = el.getAttribute(`data-${currentLang}`);
+        } else {
+            el.textContent = el.getAttribute(`data-${currentLang}`);
+        }
+    });
+
+    // Buton metnini güncelle
+    const btn = document.getElementById('lang-btn');
+    if(btn) btn.textContent = currentLang === 'en' ? '[ EN / JP ]' : '[ JP / EN ]';
+}
+
+// --- PROJE DATASI ---
 const projects = [
     {
         title: "Real-Time Dense SLAM",
@@ -6,7 +29,6 @@ const projects = [
         description: "Built a pipeline to capture RGB-D data from a stereo camera and feed it into a Gaussian Splatting training loop in real-time. Optimized rendering for NVIDIA Jetson Orin Nano edge devices.",
         technologies: ["Python", "ROS 2", "CUDA", "Docker", "NVIDIA Jetson"],
         link: "#",
-        // FOTOĞRAF KLASÖR YOLU DÜZELTİLDİ:
         image: "photos/myexpwith_gs-slam.png" 
     },
     {
@@ -35,7 +57,7 @@ const projects = [
     }
 ];
 
-// RENDER LOGIC
+// PROJELERİ LİSTELEME
 const container = document.getElementById('projects-container');
 
 if (container) {

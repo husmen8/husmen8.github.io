@@ -13,8 +13,9 @@
         <nav class="navbar">
             <div class="logo">H.M.C. // DEV</div>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">:: HOME</a></li>
-                <li><a href="projects.html">:: PROJECTS</a></li>
+                <li><a href="index.html" class="active" data-en=":: HOME" data-jp=":: ホーム">:: HOME</a></li>
+                <li><a href="projects.html" data-en=":: PROJECTS" data-jp=":: プロジェクト">:: PROJECTS</a></li>
+                <li><a href="#" id="lang-btn" onclick="toggleLanguage()">[ EN / JP ]</a></li>
                 <li><a href="docs/HuseyinMertCaliskan_CV.pdf" target="_blank" class="btn-cv">[ DOWNLOAD_CV ]</a></li>
             </ul>
         </nav>
@@ -32,50 +33,70 @@
             </h1>
 
             <div class="sub-title">
-                <img src="icons/pin.svg" class="icon-small" alt="Location">
-                MECHATRONICS ENGINEER & GAME DEV
+                <img src="icons/pin.svg" class="icon-small" alt="Loc">
+                <span data-en="MECHATRONICS ENGINEER & GAME DEV" data-jp="メカトロニクスエンジニア & ゲーム開発者">MECHATRONICS ENGINEER & GAME DEV</span>
             </div>
             
-            <p class="intro-text">
-                // SYSTEM_OVERVIEW:<br>
-                Specialized in <strong>Interactive Visual Computing</strong>, <strong>Real-Time SLAM</strong>, and 
-                <strong>Procedural Generation</strong>. Building robust systems for immersive environments.
-            </p>
+            <div class="about-academic">
+                <h3 class="tech-header" data-en="// ACADEMIC_BACKGROUND" data-jp="// 学歴・経歴">// ACADEMIC_BACKGROUND</h3>
+                <p class="intro-text" 
+                   data-en="I am a senior Mechatronics Engineering student at Kocaeli University, actively bridging the gap between <strong>Robotics</strong> and <strong>Computer Graphics</strong>. My research focuses on optimizing SLAM algorithms for edge devices."
+                   data-jp="私はコジャエリ大学のメカトロニクス工学科4年生で、<strong>ロボット工学</strong>と<strong>コンピュータグラフィックス</strong>の融合に取り組んでいます。エッジデバイス向けのSLAMアルゴリズムの最適化を研究しています。">
+                    I am a senior Mechatronics Engineering student at Kocaeli University, actively bridging the gap between <strong>Robotics</strong> and <strong>Computer Graphics</strong>. My research focuses on optimizing SLAM algorithms for edge devices.
+                </p>
+            </div>
+
+            <div class="featured-section">
+                <div class="tech-header" data-en=":: FEATURED_RESEARCH" data-jp=":: 注目の研究">:: FEATURED_RESEARCH</div>
+                <div class="featured-card">
+                    <div class="featured-img-box">
+                        <img src="photos/myexpwith_gs-slam.png" alt="SLAM Project">
+                    </div>
+                    <div class="featured-info">
+                        <h3 class="project-title" style="font-size: 1.5rem;">Real-Time Dense SLAM</h3>
+                        <span class="project-role">GRADUATION THESIS</span>
+                        <p class="project-desc" 
+                           data-en="Built a pipeline to capture RGB-D data from a stereo camera and feed it into a Gaussian Splatting training loop in real-time. Optimized for NVIDIA Jetson Orin Nano."
+                           data-jp="ステレオカメラからRGB-Dデータを取得し、リアルタイムでGaussian Splatting学習ループに供給するパイプラインを構築しました。NVIDIA Jetson Orin Nano向けに最適化されています。">
+                            Built a pipeline to capture RGB-D data from a stereo camera and feed it into a Gaussian Splatting training loop in real-time. Optimized for NVIDIA Jetson Orin Nano.
+                        </p>
+                        <a href="projects.html" class="link-box primary" style="padding: 10px 20px;">
+                            <span data-en="READ_FULL_LOG" data-jp="詳細を見る">READ_FULL_LOG</span> <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <div class="vital-links">
                 <a href="https://linkedin.com/in/huseyinmert" target="_blank" class="link-box">
                     <div class="link-content">
-                        <img src="icons/linkedin.svg" class="btn-icon" alt="LinkedIn">
-                        <span>LINKEDIN_PROFILE</span>
+                        <img src="icons/linkedin.svg" class="btn-icon" alt="In">
+                        <span>LINKEDIN</span>
                     </div>
                     <span>↗</span>
                 </a>
                 <a href="https://github.com/husmen8" target="_blank" class="link-box">
                     <div class="link-content">
-                        <img src="icons/github.svg" class="btn-icon" alt="GitHub">
-                        <span>GITHUB_REPO</span>
+                        <img src="icons/github.svg" class="btn-icon" alt="Git">
+                        <span>GITHUB</span>
                     </div>
                     <span>↗</span>
                 </a>
                 <a href="mailto:huseyinnn.merttt@gmail.com" class="link-box">
                     <div class="link-content">
-                        <img src="icons/email.svg" class="btn-icon" alt="Email">
-                        <span>SEND_MAIL</span>
+                        <img src="icons/email.svg" class="btn-icon" alt="Mail">
+                        <span>EMAIL</span>
                     </div>
                     <span>@</span>
-                </a>
-                <a href="projects.html" class="link-box primary">
-                    <span>INITIALIZE_PROJECTS</span>
-                    <span>→</span>
                 </a>
             </div>
 
             <div class="interests-section">
                 <div class="section-header">CORE_MODULES</div>
                 <ul class="interest-list">
-                    <li>Game Mechanics & Physics (Unity/Godot)</li>
+                    <li>Game Mechanics (Unity/Godot)</li>
                     <li>Embedded Vision & Edge Computing</li>
-                    <li>3D Asset Pipeline & Digital Sculpting</li>
+                    <li>3D Asset Pipeline & Sculpting</li>
                     <li>Network Automation Systems</li>
                 </ul>
             </div>
@@ -87,5 +108,6 @@
         </footer>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
