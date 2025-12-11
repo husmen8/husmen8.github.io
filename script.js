@@ -6,8 +6,8 @@ const projects = [
         description: "Built a pipeline to capture RGB-D data from a stereo camera and feed it into a Gaussian Splatting training loop in real-time. Optimized rendering for NVIDIA Jetson Orin Nano edge devices.",
         technologies: ["Python", "ROS 2", "CUDA", "Docker", "NVIDIA Jetson"],
         link: "#",
-        // SENİN DOSYA ADIN:
-        image: "myexpwith_gs-slam.png" 
+        // FOTOĞRAF KLASÖR YOLU DÜZELTİLDİ:
+        image: "photos/myexpwith_gs-slam.png" 
     },
     {
         title: "DiffCV Quest",
@@ -43,7 +43,6 @@ if (container) {
         const row = document.createElement('div');
         row.className = 'project-row';
         
-        // CSS sayacı için index atıyoruz (01, 02 diye görünsün diye)
         row.setAttribute('data-index', index + 1);
 
         let imageHTML = '';
