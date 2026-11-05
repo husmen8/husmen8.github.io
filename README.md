@@ -8,3 +8,4 @@ Personal site, plain HTML and CSS, no build step.
 - `img/`: the small pictures shown on the page (project pictures 480 x 270)
 - `photos/`: full-size photos and the poster, opened by clicking
 - `docs/`: the CV
+
