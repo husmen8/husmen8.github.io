@@ -1,105 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Husmen</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huseyin Mert Caliskan</title>
+  <meta name="description" content="Huseyin Mert Caliskan: computer graphics, computer vision and game art.">
+  <link rel="alternate" hreflang="ja" href="ja.html">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <canvas id="canvas"></canvas>
 
-    <div class="container">
-        
-        <nav class="navbar">
-            <div class="logo">HUSEYIN MERT CALISKAN</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active" data-en="HOME" data-jp="ホーム">HOME</a></li>
-                <li><a href="projects.html" data-en="PROJECTS" data-jp="プロジェクト">PROJECTS</a></li>
-                <li><a href="#" id="lang-btn" onclick="toggleLanguage()">[ EN / JP ]</a></li>
-                <li><a href="docs/HuseyinMertCaliskan_CV.pdf" target="_blank" class="btn-cv" data-en="DOWNLOAD CV" data-jp="履歴書">CV</a></li>
-            </ul>
-        </nav>
+<!-- The same page in Japanese is ja.html. When you change one, change both. -->
+<p class="lang"><a href="ja.html" lang="ja">日本語</a></p>
 
-        <main>
-            <div class="hero-layout">
-                
-                <div class="hero-content">
-                    <div class="name-box">
-                        <h1 data-en="Hello, <span>Welcome.</span>" data-jp="こんにちは、<span>ようこそ。</span>">
-                            Hello, <span>Welcome.</span>
-                        </h1>
-                    </div>
-                    
-                    <div class="role-box">
-                        <span data-en="Mechatronics Student & Game Dev" data-jp="メカトロニクス学生 & ゲーム開発者">Mechatronics Student & Game Dev</span>
-                    </div>
-                    
-                    <p class="intro-text" 
-                       data-en="I have a passion for crafting immersive 3D worlds and intelligent visual systems. Focus: <strong>Game Art</strong>, <strong>Computer Graphics (CG)</strong>, and <strong>Computer Vision</strong>."
-                       data-jp="没入感のある3D世界と高度な視覚システムの構築に情熱を注いでいます。専門: <strong>ゲームアート</strong>、<strong>コンピュータグラフィックス (CG)</strong>、<strong>コンピュータビジョン</strong>。">
-                       I have a passion for crafting immersive 3D worlds and intelligent visual systems. Focus: <strong>Game Art</strong>, <strong>Computer Graphics</strong>, and <strong>Computer Vision</strong>.
-                    </p>
+<!-- ============ About: words on the left, photo on the right ============ -->
+<header class="about">
+  <div>
+    <h1>Huseyin Mert Caliskan</h1>
+    <p>
+      I build 3D worlds and the vision systems that capture them: computer graphics,
+      computer vision and game art. Lately I have been turning drone scans of real
+      ground into whole worlds that run in a web browser.
+    </p>
+    <p>
+      Outside of that: basketball and video games.
+    </p>
+    <p class="links">
+      <a href="mailto:huseyinnn.merttt@gmail.com">Email</a> &middot;
+      <a href="docs/HuseyinMertCaliskan_CV.pdf">CV</a> &middot;
+      <a href="https://github.com/husmen8">GitHub</a> &middot;
+      <a href="https://linkedin.com/in/huseyinmert">LinkedIn</a>
+    </p>
+  </div>
+  <img class="me" src="img/me.jpg" width="160" height="213" alt="Huseyin Mert Caliskan">
+</header>
 
-                    <div class="action-buttons">
-                        <a href="https://linkedin.com/in/huseyinmert" target="_blank" class="btn-box">LINKEDIN</a>
-                        <a href="https://github.com/husmen8" target="_blank" class="btn-box">GITHUB</a>
-                        <a href="mailto:huseyinnn.merttt@gmail.com" class="btn-box">EMAIL</a>
-                    </div>
-                </div>
+<!-- ============ Projects: newest first ============ -->
+<h2>Projects</h2>
 
-                <div class="profile-wrapper">
-                    <img src="photos/me_pfp.png" alt="Profile" class="profile-pic" onerror="this.src='https://images.unsplash.com/photo-1578353022142-09264fd64295?q=80&w=1000&auto=format&fit=crop'">
-                </div>
+<!-- One project: a picture on the left, words on the right.
+     To add one, copy a <div class="project"> block and change it.
+     Pictures are 480 x 270 files (16:9), shown at 240 x 135. -->
+<div class="project">
+  <a href="https://husmen8.github.io/bozkir/project.html"><img src="img/bozkir.webp" width="240" height="135" alt="flying over captured grass, gravel and desert in bozkır"></a>
+  <div>
+    <h3><a href="https://husmen8.github.io/bozkir/project.html">bozkır: captured ground, placed by terrain</a></h3>
+    <p class="meta">2026 &middot; solo project</p>
+    <p>
+      A few square metres of real ground, scanned from drone photos as 3D Gaussian
+      splats, made into seamless tiles and laid over kilometres of generated terrain.
+      The land decides where each material goes; rivers are cut in metres and filled
+      with water measured from the same photos. Everything runs in the browser.
+    </p>
+    <p class="links">
+      <a href="https://husmen8.github.io/bozkir/project.html">project page</a> &middot;
+      <a href="https://husmen8.github.io/bozkir/?demo">live demo</a> &middot;
+      <a href="https://husmen8.github.io/bozkir/media/demo.mp4">video</a> &middot;
+      <a href="https://github.com/husmen8/bozkir">code</a>
+    </p>
+  </div>
+</div>
 
-            </div>
+<div class="project">
+  <a href="https://github.com/husmen8/Gaussian-SLAM"><img src="img/slam.jpg" width="240" height="135" alt="a map of a room with a checkerboard, built by Gaussian splatting SLAM"></a>
+  <div>
+    <h3><a href="https://github.com/husmen8/Gaussian-SLAM">Gaussian splatting SLAM on a Jetson Orin Nano</a></h3>
+    <p class="meta">graduation project &middot; experiment</p>
+    <p>
+      With little hardware and budget, the question was whether an NVIDIA Jetson Orin
+      Nano could run Gaussian splatting SLAM live, mapping as the camera moves rather
+      than from a pre-made 3D map. Based on Gaussian-SLAM (Yugay et al.), adapted to
+      CUDA 12.2 and the Jetson's memory. Path finding and SLAM on ROS 2 were the
+      planned next step.
+    </p>
+    <p class="links">
+      <a href="https://github.com/husmen8/Gaussian-SLAM/blob/main/docs/GS-SLAM_JetsonOrin.pdf">report (PDF)</a> &middot;
+      <a href="https://github.com/husmen8/Gaussian-SLAM">code</a>
+    </p>
+  </div>
+</div>
 
-            <div class="interests-container">
-                <div class="section-header" data-en="AREAS OF INTEREST" data-jp="興味のある分野">AREAS OF INTEREST</div>
-                <ul class="interest-list">
-                    <li>Game Mechanics & Physics Engines (Unity/UE5)</li>
-                    <li>Embedded Vision & Edge Computing</li>
-                    <li>3D Asset Pipeline & Digital Sculpting</li>
-                    <li>Basketball & Video Games</li>
-                </ul>
-            </div>
+<div class="project">
+  <a href="photos/poster.png"><img src="img/rover.jpg" width="240" height="135" alt="a model of the agricultural rover with its arm"></a>
+  <div>
+    <h3><a href="photos/poster.png">Auto-Agri Rover</a></h3>
+    <p class="meta">software developer &middot; team project</p>
+    <p>
+      SLAM-based 3D mapping and system integration with ROS 2 for an autonomous ground
+      vehicle, with motor control and sensor interfacing.
+    </p>
+    <p class="links"><a href="photos/poster.png">poster</a></p>
+  </div>
+</div>
 
-            <div class="gallery-section">
-                <div style="text-align: center; margin-bottom: 1.5rem; font-family: var(--font-title); color: var(--accent-orange); font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase;">
-                    Glimpses
-                </div>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="photos/ist-1.jpg" alt="Istanbul View">
-                        <div class="gallery-caption">Istanbul</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="photos/teknofest.png" alt="Competition">
-                        <div class="gallery-caption">Field Work</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="photos/jpn-1.jpg" alt="Japan Travel Shoots #1">
-                        <div class="gallery-caption">Travels</div>
-                    </div>
-                </div>
-            </div>
+<!-- ============ Smaller things: one line each ============ -->
+<h2>Smaller things</h2>
+<ul>
+  <li><a href="https://github.com/husmen8/Godot_Diff_CV"><b>DiffCV Quest</b></a>:
+    a game that teaches computer vision, with levels that show edge detection and
+    thresholding through game mechanics (Godot, OpenCV).</li>
+  <li><b>3D asset tools</b>: parametric tools in Blender Geometry Nodes, a wall
+    generator and procedural rock and wood alpha textures.</li>
+</ul>
 
-        </main>
+<!-- ============ Photos: click one to open it full size ============ -->
+<h2>Photos</h2>
+<div class="photos">
+  <a href="photos/ist-1.jpg"><img src="img/istanbul.jpg" width="480" height="360" alt="the Bosphorus in Istanbul at dusk"></a>
+  <a href="photos/teknofest.png"><img src="img/teknofest.jpg" width="480" height="360" alt="our team with the rover at Teknofest"></a>
+  <a href="photos/jpn-1.jpg"><img src="img/japan.jpg" width="480" height="360" alt="a street in Japan"></a>
+</div>
 
-        <footer>
-            <p>© 2025</p>
-        </footer>
-    </div>
+<footer>
+  Last updated November 2026.
+</footer>
 
-    <div id="lightbox" class="lightbox-modal">
-        <span class="close-btn" onclick="closeLightbox()">&times;</span>
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-        <img class="lightbox-content" id="lightbox-img">
-        <div id="lightbox-caption" class="lightbox-caption"></div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

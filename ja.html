@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huseyin Mert Caliskan</title>
+  <meta name="description" content="Huseyin Mert Caliskan：コンピュータグラフィックス、コンピュータビジョン、ゲームアート。">
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- index.html の日本語版です。片方を変えたら、もう片方も変えてください。 -->
+<p class="lang"><a href="index.html" lang="en">English</a></p>
+
+<!-- ============ 自己紹介 ============ -->
+<header class="about">
+  <div>
+    <h1>Huseyin Mert Caliskan</h1>
+    <p>
+      3Dの世界と、それを捉えるビジョンシステムを作っています。分野はコンピュータグラフィックス、コンピュータビジョン、ゲームアートです。最近は、ドローンで撮影した実際の地面のスキャンから、ウェブブラウザで動く世界を丸ごと作っています。
+    </p>
+    <p>
+      趣味はバスケットボールとビデオゲームです。
+    </p>
+    <p class="links">
+      <a href="mailto:huseyinnn.merttt@gmail.com">メール</a> &middot;
+      <a href="docs/HuseyinMertCaliskan_CV.pdf">CV（英語）</a> &middot;
+      <a href="https://github.com/husmen8">GitHub</a> &middot;
+      <a href="https://linkedin.com/in/huseyinmert">LinkedIn</a>
+    </p>
+  </div>
+  <img class="me" src="img/me.jpg" width="160" height="213" alt="Huseyin Mert Caliskan">
+</header>
+
+<!-- ============ プロジェクト（新しい順） ============ -->
+<h2>プロジェクト</h2>
+
+<div class="project">
+  <a href="https://husmen8.github.io/bozkir/project.html"><img src="img/bozkir.webp" width="240" height="135" alt="bozkırで取り込んだ草地、砂利、砂漠の上を飛ぶ映像"></a>
+  <div>
+    <h3><a href="https://husmen8.github.io/bozkir/project.html">bozkır：実際の地面を、地形に合わせて配置する</a></h3>
+    <p class="meta">2026年 &middot; 個人プロジェクト</p>
+    <p>
+      ドローン写真から3Dガウシアンスプラッティングで数平方メートルの実際の地面を取り込み、継ぎ目のないタイルにして、生成した数キロメートルの地形に敷き詰めます。どの素材をどこに置くかは地形そのものが決め、川はメートル単位で刻まれ、同じ写真から測った水で満たされます。すべてブラウザ上で動きます。
+    </p>
+    <p class="links">
+      <a href="https://husmen8.github.io/bozkir/project.html">プロジェクトページ</a> &middot;
+      <a href="https://husmen8.github.io/bozkir/?demo">ライブデモ</a> &middot;
+      <a href="https://husmen8.github.io/bozkir/media/demo.mp4">動画</a> &middot;
+      <a href="https://github.com/husmen8/bozkir">コード</a>
+    </p>
+  </div>
+</div>
+
+<div class="project">
+  <a href="https://github.com/husmen8/Gaussian-SLAM"><img src="img/slam.jpg" width="240" height="135" alt="ガウシアンスプラッティングSLAMで作った、チェッカーボードのある部屋の地図"></a>
+  <div>
+    <h3><a href="https://github.com/husmen8/Gaussian-SLAM">Jetson Orin Nano上のガウシアンスプラッティングSLAM</a></h3>
+    <p class="meta">卒業研究 &middot; 実験</p>
+    <p>
+      限られたハードウェアと予算の中で、NVIDIA Jetson Orin NanoがガウシアンスプラッティングSLAMをライブで、つまり事前に作った3Dマップではなくカメラの動きに合わせて実行できるかを確かめた実験です。
+      Gaussian-SLAM（Yugayら）をもとに、CUDA 12.2とJetsonのメモリに合わせて調整しました。次の段階として、ROS 2での経路計画とSLAMを予定していました。
+    </p>
+    <p class="links">
+      <a href="https://github.com/husmen8/Gaussian-SLAM/blob/main/docs/GS-SLAM_JetsonOrin.pdf">レポート（PDF）</a> &middot;
+      <a href="https://github.com/husmen8/Gaussian-SLAM">コード</a>
+    </p>
+  </div>
+</div>
+
+<div class="project">
+  <a href="photos/poster.png"><img src="img/rover.jpg" width="240" height="135" alt="アーム付き農業用ローバーのモデル"></a>
+  <div>
+    <h3><a href="photos/poster.png">Auto-Agri Rover</a></h3>
+    <p class="meta">ソフトウェア担当 &middot; チームプロジェクト</p>
+    <p>
+      自律走行する農業用ローバーのために、ROS 2を使ったSLAMベースの3Dマッピングとシステム統合、モーター制御とセンサーの接続を担当しました。
+    </p>
+    <p class="links"><a href="photos/poster.png">ポスター</a></p>
+  </div>
+</div>
+
+<!-- ============ その他 ============ -->
+<h2>その他</h2>
+<ul>
+  <li><a href="https://github.com/husmen8/Godot_Diff_CV"><b>DiffCV Quest</b></a>：コンピュータビジョンを学べるゲーム。エッジ検出や二値化を、ゲームの仕組みで見せるステージです（Godot、OpenCV）。</li>
+  <li><b>3Dアセットツール</b>：Blender Geometry Nodesによるパラメトリックなツール。壁ジェネレーターと、岩や木のプロシージャルなアルファテクスチャ。</li>
+</ul>
+
+<!-- ============ 写真（クリックで大きく開きます） ============ -->
+<h2>写真</h2>
+<div class="photos">
+  <a href="photos/ist-1.jpg"><img src="img/istanbul.jpg" width="480" height="360" alt="夕暮れのイスタンブール、ボスポラス海峡"></a>
+  <a href="photos/teknofest.png"><img src="img/teknofest.jpg" width="480" height="360" alt="Teknofestでローバーとチーム"></a>
+  <a href="photos/jpn-1.jpg"><img src="img/japan.jpg" width="480" height="360" alt="日本の街並み"></a>
+</div>
+
+<footer>
+  最終更新：2026年11月
+</footer>
+
+</body>
+</html>
